@@ -12,7 +12,8 @@ class Store extends BaseStore {
   constructor (config = {}) {
     super(config)
 
-    AWS.config.setPromisesDependency(Promise)
+    // We don't need this since we're running a version of Node with promises.
+    // AWS.config.setPromisesDependency(Promise)
 
     const {
       accessKeyId,
